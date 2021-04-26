@@ -35,35 +35,55 @@ public class Solver {
 			// Constraint 1 - Time 
 			GRBLinExpr timeExp = new GRBLinExpr();
 			for(int i = 0 ; i < itemCount ; i++) {
-				timeExp.addTerm(data.item.get(i).getTime(), itemID_grbVAr.get(Integer.toString(i)));
+				timeExp.addTerm(data.item.get(i).getTime(), itemID_grbVAr.get(data.item.get(i).getId()));
 			}
 			model.addConstr(timeExp, GRB.LESS_EQUAL, data.timeCapacity, "Time Constaint Equation");
+			
 			
 			
 			// Constraint 2 - Weight 
 			GRBLinExpr weightExp = new GRBLinExpr();
 			for(int i = 0 ; i < itemCount ; i++) {
-				weightExp.addTerm(data.item.get(i).getWeight(), itemID_grbVAr.get(Integer.toString(i)));
+				weightExp.addTerm(data.item.get(i).getWeight(), itemID_grbVAr.get(data.item.get(i).getId()));
 			}
 			model.addConstr(weightExp, GRB.LESS_EQUAL, data.knapsackCapacity, "Weight Constaint Equation");
+			
 			
 			
 			// Objective - Maximize Value
 			GRBLinExpr valueObj = new GRBLinExpr();
 			for(int i = 0 ; i < itemCount ; i++) {
-				valueObj.addTerm(data.item.get(i).getValue(), itemID_grbVAr.get(Integer.toString(i)));
+				valueObj.addTerm(data.item.get(i).getValue(), itemID_grbVAr.get(data.item.get(i).getId()));
 			}
+			
+			
 			model.setObjective(valueObj,GRB.MAXIMIZE);
+
+			model.write("problem_equations.lp");
+			model.optimize();
 			
 			
-			
-			// Delete environment and model
-			env.dispose();
-			model.dispose();
+//			// Delete environment and model
+//			env.dispose();
+//			model.dispose();
 			
 			
 		}catch(Exception e) {
 			System.out.println("There is a problem in Solver !!");
+		}
+		
+	}
+	
+	public void showSolution() {
+		
+		for(Item i : data.item) {
+			
+			try {
+				System.out.println(i.toString()+ "\nOptimized Value: " + itemID_grbVAr.get(i.getId()).get(GRB.DoubleAttr.X));
+			} catch (GRBException e) {
+				e.printStackTrace();
+			}
+			
 		}
 		
 	}

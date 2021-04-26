@@ -21,6 +21,7 @@ public class KnapSack {
 		Solver solver = new Solver(data);
 		
 		solver.Solve();
+		solver.showSolution();
 	}
 
 	// Read data and create item array and return them

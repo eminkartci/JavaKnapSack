@@ -19,6 +19,13 @@ public class Item {
 	public Item(String id){
 		this(id,0,0,0);
 	}
+	
+	public String toString() {
+		return "--- ITEM " + this.id + " ---\n"
+			   +"Value	: " + this.value+ "\n"
+			   +"Time	: " + this.time+ "\n"
+			   +"Weight	: " + this.weight+ "\n";
+	}
 
 	
 	// GETTER - SETTER
