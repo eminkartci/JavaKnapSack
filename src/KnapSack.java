@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 // KnapSack
 	// Reading & Generating the items
@@ -15,7 +16,7 @@ public class KnapSack {
 	// Program starts here
 	public static void main(String[] args) {
 		
-		Data problemData = ReadData();
+		Data data = ReadData();
 
 		
 	}
@@ -24,7 +25,9 @@ public class KnapSack {
 	private static Data ReadData() {
 		
 		// initialize
-		Data problemData = new Data();
+		Data data = new Data();
+		
+		data.item = new ArrayList<Item>();
 		
 		// Read data from csv file 
 		try {
@@ -48,14 +51,26 @@ public class KnapSack {
 			
 			String[] item_value_time = line.split(",");
 			
-			System.out.println(line);
+			for (int i = 1 ; i  < item_id_array.length ; i++ ) {
+				
+				Item currentItem = new Item(item_id_array[i],Integer.parseInt( item_value_array[i]),Integer.parseInt(item_value_weight[i]),Integer.parseInt(item_value_time[i]));
+				
+				data.item.add(currentItem);
+				
+			}
 		
+			line = bufferedReader.readLine();
+			
+			String[] capacity_array = line.split(",");
+			
+			data.knapsackCapacity = Integer.parseInt(capacity_array[1]);
+			
 		// Inform the user
 		} catch (Exception e ) {
 			e.printStackTrace();
 		}
 
-		return problemData;
+		return data;
 		
 	}
 	
