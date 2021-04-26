@@ -65,7 +65,8 @@ public class KnapSack {
 			
 			String[] capacity_array = line.split(",");
 			
-			data.knapsackCapacity = Integer.parseInt(capacity_array[1]);
+			data.knapsackCapacity 	= Integer.parseInt(capacity_array[1]);
+			data.timeCapacity 		= Integer.parseInt(capacity_array[3]);
 			
 		// Inform the user
 		} catch (Exception e ) {

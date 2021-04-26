@@ -8,7 +8,7 @@ public class Data {
 	public ArrayList<Item> item;
 	
 		// Max Capacity of the bag
-	public int knapsackCapacity;
+	public int knapsackCapacity,timeCapacity;
 
 
 }

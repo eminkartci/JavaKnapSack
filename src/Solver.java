@@ -32,7 +32,28 @@ public class Solver {
 				
 			}
 			
-			System.out.println(itemID_grbVAr);
+			// Constraint 1 - Time 
+			GRBLinExpr timeExp = new GRBLinExpr();
+			for(int i = 0 ; i < itemCount ; i++) {
+				timeExp.addTerm(data.item.get(i).getTime(), itemID_grbVAr.get(Integer.toString(i)));
+			}
+			model.addConstr(timeExp, GRB.LESS_EQUAL, data.timeCapacity, "Time Constaint Equation");
+			
+			
+			// Constraint 2 - Weight 
+			GRBLinExpr weightExp = new GRBLinExpr();
+			for(int i = 0 ; i < itemCount ; i++) {
+				weightExp.addTerm(data.item.get(i).getWeight(), itemID_grbVAr.get(Integer.toString(i)));
+			}
+			model.addConstr(weightExp, GRB.LESS_EQUAL, data.knapsackCapacity, "Weight Constaint Equation");
+			
+			
+			// Objective - Maximize Value
+			GRBLinExpr valueObj = new GRBLinExpr();
+			for(int i = 0 ; i < itemCount ; i++) {
+				valueObj.addTerm(data.item.get(i).getValue(), itemID_grbVAr.get(Integer.toString(i)));
+			}
+			model.setObjective(valueObj,GRB.MAXIMIZE);
 			
 			
 			

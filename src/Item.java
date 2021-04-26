@@ -37,5 +37,11 @@ public class Item {
 	public String getId() {
 		return this.id;
 	}
+	public void setTime(int time) {
+		this.time=time;
+	}
+	public int getTime() {
+		return this.time;
+	}
 
 }
