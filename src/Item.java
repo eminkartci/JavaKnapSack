@@ -5,17 +5,19 @@ public class Item {
 	private String id;
 	private int value;
 	private int weight;
+	private int time;
 	
 	// Main Constructor
-	public Item(String id,int value,int weight){
+	public Item(String id,int value,int weight, int time){
 		this.id		=id;
 		this.value	=value;
 		this.weight	=weight;
+		this.time	=time;
 	}
 
 	// Side Constructor
 	public Item(String id){
-		this(id,0,0);
+		this(id,0,0,0);
 	}
 
 	
