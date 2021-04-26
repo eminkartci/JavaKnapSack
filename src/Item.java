@@ -2,14 +2,22 @@
 public class Item {
 	
 	// Attributes
-	private String itemId;
+	private String id;
 	private int value;
 	private int weight;
 	
-	// Constructor
-	Item(String itemId){
-		this.itemId=itemId;
+	// Main Constructor
+	public Item(String id,int value,int weight){
+		this.id		=id;
+		this.value	=value;
+		this.weight	=weight;
 	}
+
+	// Side Constructor
+	public Item(String id){
+		this(id,0,0);
+	}
+
 	
 	// GETTER - SETTER
 	public void setValue(int value) {
@@ -25,7 +33,7 @@ public class Item {
 		return this.weight;
 	}
 	public String getId() {
-		return this.itemId;
+		return this.id;
 	}
 
 }
