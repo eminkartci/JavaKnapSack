@@ -95,6 +95,7 @@ public class Solver {
 	// gather selected items
 	public void gatherSelectedItems() {
 		
+		// loop all items
 		for(Item i : data.item) {
 			
 			try {
@@ -114,16 +115,44 @@ public class Solver {
 		}
 	}
 	
+	// calculate total values
+	public void calculateTotalValues() {
+		
+		this.solutionTime = 0;
+		this.solutionWeigth = 0;
+		this.solutionValue = 0;
+		
+		for (Item i : selectedItems) {
+			
+			this.solutionTime += i.getTime();
+			this.solutionWeigth += i.getWeight();
+			this.solutionValue += i.getValue();
+		}
+		
+	}
 	
 	// show sum of the solution and items that are selected 
 	public void showSum() {
 		
+		// hold selected items
 		gatherSelectedItems();
-
+		// calculate total value time weight
+		calculateTotalValues();
+	
+		// Print to the screen
+		System.out.println("--- Solution ---");
+		System.out.println("| Total Time: " + this.solutionTime);
+		System.out.println("| Total Weight: " + this.solutionWeigth);
+		System.out.println("| Total Value: " + this.solutionValue);
+		
+		// SHOW SELECTED ITEMS
+		System.out.println("\n\n SELECTED ITEMS ");
+		
+		for (Item i : selectedItems) {
+			
+			System.out.println(i.toString());
 			
 		}
-		
-		
 		
 	}
 	
