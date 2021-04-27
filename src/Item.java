@@ -24,7 +24,7 @@ public class Item {
 		return "--- ITEM " + this.id + " ---\n"
 			   +"Value	: " + this.value+ "\n"
 			   +"Time	: " + this.time+ "\n"
-			   +"Weight	: " + this.weight+ "\n";
+			   +"Weight	: " + this.weight;
 	}
 
 	

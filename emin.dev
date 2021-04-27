@@ -149,3 +149,179 @@ Solution count 2: 578 443
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 5.780000000000e+02, best bound 5.780000000000e+02, gap 0.0000%
+
+Gurobi 9.1.1 (mac64, Java) logging started Tue Apr 27 17:50:20 2021
+
+Academic license - for non-commercial use only - expires 2021-06-20
+Warning: constraint name "Time Constaint Equation" has a space
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (mac64)
+Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
+Optimize a model with 2 rows, 15 columns and 30 nonzeros
+Model fingerprint: 0x25bc1f54
+Variable types: 0 continuous, 15 integer (15 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 9e+00]
+  Objective range  [2e+01, 8e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e+01, 6e+01]
+Found heuristic solution: objective 443.0000000
+Presolve time: 0.01s
+Presolved: 2 rows, 15 columns, 30 nonzeros
+Variable types: 0 continuous, 15 integer (15 binary)
+
+Root relaxation: objective 5.951765e+02, 4 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  595.17647    0    2  443.00000  595.17647  34.4%     -    0s
+H    0     0                     578.0000000  595.17647  2.97%     -    0s
+     0     0  588.27586    0    3  578.00000  588.27586  1.78%     -    0s
+     0     0  586.80000    0    3  578.00000  586.80000  1.52%     -    0s
+     0     0  586.50000    0    1  578.00000  586.50000  1.47%     -    0s
+     0     0     cutoff    0       578.00000  578.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Cover: 2
+  MIR: 1
+
+Explored 1 nodes (8 simplex iterations) in 0.03 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 578 443 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.780000000000e+02, best bound 5.780000000000e+02, gap 0.0000%
+
+Gurobi 9.1.1 (mac64, Java) logging started Tue Apr 27 17:50:39 2021
+
+Academic license - for non-commercial use only - expires 2021-06-20
+Warning: constraint name "Time Constaint Equation" has a space
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (mac64)
+Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
+Optimize a model with 2 rows, 15 columns and 30 nonzeros
+Model fingerprint: 0x25bc1f54
+Variable types: 0 continuous, 15 integer (15 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 9e+00]
+  Objective range  [2e+01, 8e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e+01, 6e+01]
+Found heuristic solution: objective 443.0000000
+Presolve time: 0.00s
+Presolved: 2 rows, 15 columns, 30 nonzeros
+Variable types: 0 continuous, 15 integer (15 binary)
+
+Root relaxation: objective 5.951765e+02, 4 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  595.17647    0    2  443.00000  595.17647  34.4%     -    0s
+H    0     0                     578.0000000  595.17647  2.97%     -    0s
+     0     0  588.27586    0    3  578.00000  588.27586  1.78%     -    0s
+     0     0  586.80000    0    3  578.00000  586.80000  1.52%     -    0s
+     0     0  586.50000    0    1  578.00000  586.50000  1.47%     -    0s
+     0     0     cutoff    0       578.00000  578.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Cover: 2
+  MIR: 1
+
+Explored 1 nodes (8 simplex iterations) in 0.02 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 578 443 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.780000000000e+02, best bound 5.780000000000e+02, gap 0.0000%
+
+Gurobi 9.1.1 (mac64, Java) logging started Tue Apr 27 17:52:46 2021
+
+Academic license - for non-commercial use only - expires 2021-06-20
+Warning: constraint name "Time Constaint Equation" has a space
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (mac64)
+Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
+Optimize a model with 2 rows, 15 columns and 30 nonzeros
+Model fingerprint: 0x25bc1f54
+Variable types: 0 continuous, 15 integer (15 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 9e+00]
+  Objective range  [2e+01, 8e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e+01, 6e+01]
+Found heuristic solution: objective 443.0000000
+Presolve time: 0.00s
+Presolved: 2 rows, 15 columns, 30 nonzeros
+Variable types: 0 continuous, 15 integer (15 binary)
+
+Root relaxation: objective 5.951765e+02, 4 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  595.17647    0    2  443.00000  595.17647  34.4%     -    0s
+H    0     0                     578.0000000  595.17647  2.97%     -    0s
+     0     0  588.27586    0    3  578.00000  588.27586  1.78%     -    0s
+     0     0  586.80000    0    3  578.00000  586.80000  1.52%     -    0s
+     0     0  586.50000    0    1  578.00000  586.50000  1.47%     -    0s
+     0     0     cutoff    0       578.00000  578.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Cover: 2
+  MIR: 1
+
+Explored 1 nodes (8 simplex iterations) in 0.01 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 578 443 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.780000000000e+02, best bound 5.780000000000e+02, gap 0.0000%
+
+Gurobi 9.1.1 (mac64, Java) logging started Tue Apr 27 17:52:52 2021
+
+Academic license - for non-commercial use only - expires 2021-06-20
+Warning: constraint name "Time Constaint Equation" has a space
+Gurobi Optimizer version 9.1.1 build v9.1.1rc0 (mac64)
+Thread count: 2 physical cores, 4 logical processors, using up to 4 threads
+Optimize a model with 2 rows, 15 columns and 30 nonzeros
+Model fingerprint: 0x25bc1f54
+Variable types: 0 continuous, 15 integer (15 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 9e+00]
+  Objective range  [2e+01, 8e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e+01, 6e+01]
+Found heuristic solution: objective 443.0000000
+Presolve time: 0.00s
+Presolved: 2 rows, 15 columns, 30 nonzeros
+Variable types: 0 continuous, 15 integer (15 binary)
+
+Root relaxation: objective 5.951765e+02, 4 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  595.17647    0    2  443.00000  595.17647  34.4%     -    0s
+H    0     0                     578.0000000  595.17647  2.97%     -    0s
+     0     0  588.27586    0    3  578.00000  588.27586  1.78%     -    0s
+     0     0  586.80000    0    3  578.00000  586.80000  1.52%     -    0s
+     0     0  586.50000    0    1  578.00000  586.50000  1.47%     -    0s
+     0     0     cutoff    0       578.00000  578.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 1
+  Cover: 2
+  MIR: 1
+
+Explored 1 nodes (8 simplex iterations) in 0.00 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 578 443 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.780000000000e+02, best bound 5.780000000000e+02, gap 0.0000%

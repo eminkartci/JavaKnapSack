@@ -1,5 +1,6 @@
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import gurobi.*;
@@ -9,6 +10,8 @@ public class Solver {
 	// Requires a data
 	private Data data;
 	private HashMap<String,GRBVar> itemID_grbVAr = new HashMap<String,GRBVar>();
+	private ArrayList<Item> selectedItems = new ArrayList<Item>();
+	private double solutionWeigth,solutionTime,solutionValue;
 	
 	// Constructor
 	public Solver (Data data) {
@@ -74,6 +77,7 @@ public class Solver {
 		
 	}
 	
+	// show all items
 	public void showSolution() {
 		
 		for(Item i : data.item) {
@@ -87,5 +91,41 @@ public class Solver {
 		}
 		
 	}
+	
+	// gather selected items
+	public void gatherSelectedItems() {
+		
+		for(Item i : data.item) {
+			
+			try {
+				// get the optimized value
+				double optimizedValue = itemID_grbVAr.get(i.getId()).get(GRB.DoubleAttr.X);
+				
+				if (optimizedValue == 1.0) {
+					
+					selectedItems.add(i);
+					
+				}
+				
+			} catch (GRBException e) {
+				e.printStackTrace();
+			}
+			
+		}
+	}
+	
+	
+	// show sum of the solution and items that are selected 
+	public void showSum() {
+		
+		gatherSelectedItems();
+
+			
+		}
+		
+		
+		
+	}
+	
 
 }
