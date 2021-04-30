@@ -53,9 +53,13 @@ public class LargestValueSolver {
 
     public void showSelected(){
 
+        int totalValue = 0;
         for (Item i : selectedItems){
             System.out.println(i);
+            totalValue += i.getValue();
         }
+
+        System.out.println("TOTAL VALUE: " + totalValue);
 
     }
 
