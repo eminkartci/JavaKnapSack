@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
-public class SmallestWeightSolver {
+public class LargestValueSolver {
 
     private Data data;
     private ArrayList<Item> selectedItems = new ArrayList<Item>();
     private int occupiedCapacity = 0;
 
-    public SmallestWeightSolver(Data data){
+    public LargestValueSolver(Data data){
         this.data = data;
     }
 
@@ -17,31 +17,31 @@ public class SmallestWeightSolver {
 
         for( int i = 0 ; i < data.items.size() ; i++){
 
-            Item lessWItem = null;
+            Item mostValItem = null;
 
             for (Item item : tempItems){
 
-                if(lessWItem == null){
-                    lessWItem = item;
+                if(mostValItem == null){
+                    mostValItem = item;
                 }else{
 
-                    if (lessWItem.getWeight() > item.getWeight()){
-                        lessWItem = item;
+                    if (mostValItem.getValue() < item.getValue()){
+                        mostValItem = item;
                     }
 
                 }
 
             }
 
-            if(occupiedCapacity + lessWItem.getWeight() <= data.knapsackCapacity){
+            if(occupiedCapacity + mostValItem.getWeight() <= data.knapsackCapacity){
 
-                selectedItems.add(lessWItem);
-                tempItems.remove(lessWItem);
-                occupiedCapacity += lessWItem.getWeight();
+                selectedItems.add(mostValItem);
+                tempItems.remove(mostValItem);
+                occupiedCapacity += mostValItem.getWeight();
 
             }else{
 
-                tempItems.remove(lessWItem);
+                tempItems.remove(mostValItem);
 
             }
 

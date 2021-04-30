@@ -17,15 +17,9 @@ public class KnapSack {
 	public static void main(String[] args) {
 		
 		Data data = ReadData();
+        LargestValueSolver lvs = new LargestValueSolver(data);
 
-        HeruisticSolver hs = new HeruisticSolver(data);
-
-        SmallestWeightSolver sws = new SmallestWeightSolver(data);
-
-        //hs.selectBestItems();
-
-        sws.solve();
-
+        lvs.solve();
 	}
 
 	// Read data and create item array and return them
