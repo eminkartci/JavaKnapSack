@@ -20,7 +20,11 @@ public class KnapSack {
 
         HeruisticSolver hs = new HeruisticSolver(data);
 
-        hs.sortItemsPutHashMap();
+        SmallestWeightSolver sws = new SmallestWeightSolver(data);
+
+        //hs.selectBestItems();
+
+        sws.solve();
 
 	}
 
